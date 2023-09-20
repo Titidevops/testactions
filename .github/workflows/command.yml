@@ -1,0 +1,24 @@
+name: Shell Commands
+
+on:
+  push:
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Echo String
+        run: echo "Hello World"
+      - name: Multi String
+        run: |
+          node -v
+          npm -v
+  run-windows-commands:
+      runs-on: windows-latest
+      steps:
+        - name: Directory
+          run: Get-Location
+        - name: Directory bash
+          run: pwd      
