@@ -1,7 +1,6 @@
 name: Shell Commands
 
-on:
-  push:
+on: [push]
 
 jobs:
   run-shell-command:
@@ -21,4 +20,4 @@ jobs:
         - name: Directory
           run: Get-Location
         - name: Directory bash
-          run: pwd      
+          run: pwd  
